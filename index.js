@@ -54,3 +54,28 @@ function removeFromLocalStorage(key) {
     localStorage.removeItem(key);
     console.log(`valore rimosso dal localstorage con la chiave "${key}"`);
 }
+
+//sessionstorage
+function saveToSessionStorage(key, value) {
+    sessionStorage.setItem(key, value);
+    console.log(`valore salvato nel sessionstorage con la chiave "${key}": ${value}`);
+}
+
+//funzione per recuperare un valore nel sessionstorage
+function getFromSessionStorage(key) {
+    const value = sessionStorage.getItem(key);
+    if (value !== null) {
+        console.log(`valore recuperato dal sessionstorage con la chiave "${key}": ${value}`)
+    }else {
+        console.log(`nessun valore trovato nel sessionstorage per la chiave "${key}"`);
+    }
+    return value;
+}
+
+//funzione per rimuovere un valore del sessionstorage
+function removeFromSessionStorage(key) {
+    sessionStorage.removeItem(key);
+    console.log(`valore rimosso dal sessionstorage con la chiave "${key}"`);
+}
+
+
