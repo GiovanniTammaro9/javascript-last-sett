@@ -31,3 +31,26 @@ function deleteCookie(name) {
 saveCookie("username", "Giovanni", 10);
 getCookie("username");
 deleteCookie("uesername");
+
+//localstorage
+function saveToLocalStorage(key, value) {
+    localStorage.setItem(key, value);
+    console.log(`valore salvato nel localStorage con la chiave "${key}": ${value}`);
+}
+
+//funzione per recuperare un valore nel localstorage
+function getFromLocalStorage(key) {
+    const value = localStorage.getItem(key);
+    if (value !== null) {
+        console.log(`valore recuperato dal localstorage con la chiave "${key}": ${value}`)
+    }else {
+        console.log(`nessun valore trovato nel localstorage per la chiave "${key}"`);
+    }
+    return value;
+}
+
+//funzione per rimuovere un valore del localStorage
+function removeFromLocalStorage(key) {
+    localStorage.removeItem(key);
+    console.log(`valore rimosso dal localstorage con la chiave "${key}"`);
+}
